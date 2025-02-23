@@ -9,10 +9,12 @@ This was one of my early hacking experiments in college, where I explored web se
 ⚠️ **Disclaimer:** This project was purely for educational purposes to understand security flaws and ethical hacking techniques. Always follow ethical guidelines and legal boundaries when working on cybersecurity-related projects.  
 
 ## 🛠️ Technologies Used  
-- **Python** 🐍  
-- **PIL (Pillow)** for image processing  
-- **Requests** library for handling HTTP requests  
-- **Binary Search Algorithm** for efficient password cracking  
+- **Python** 🐍 – Core programming language.  
+- **Requests** – For handling HTTP requests (GET, POST) to interact with the login page and CAPTCHA system.  
+- **PIL (Pillow)** – For image processing and converting CAPTCHA images to grayscale.  
+- **io.BytesIO** – For handling image byte streams efficiently.  
+- **JSON** – For parsing server responses during password cracking.  
+- **Binary Search Algorithm** – For efficiently determining the correct password based on server response statuses.  
 
 ## 📸 CAPTCHA Breakdown  
 The CAPTCHA system was composed of smaller images, each representing a number from **zero to nine**. The goal was to programmatically **analyze and reconstruct the CAPTCHA** to bypass it.  
@@ -25,8 +27,3 @@ The CAPTCHA system was composed of smaller images, each representing a number fr
 2. **CAPTCHA Bypass:**  
    - The CAPTCHA image is formed by stitching together **smaller digit images**.  
    - By segmenting the image and identifying each number, we can reconstruct the CAPTCHA solution.  
-
-## 🎯 Lessons Learned  
-- How **web authentication** can be exploited through status-based password guessing.  
-- Techniques for **image processing** and pattern recognition.  
-- The importance of **CAPTCHA security** and how weak implementations can be cracked.  
